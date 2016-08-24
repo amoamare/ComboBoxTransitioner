@@ -5,7 +5,6 @@ namespace ComboBoxTranisitioner
 {
     public class ComboBoxItemTemplateSelector : DataTemplateSelector
     {
-        // Can set both templates from XAML
         public DataTemplate SelectedItemTemplate { get; set; }
         public DataTemplate ItemTemplate { get; set; }
 
@@ -18,12 +17,6 @@ namespace ComboBoxTranisitioner
             {
                 selected = true;
             }
-            //var combBox = parent as ComboBox;
-            //if (cbo != null)
-            //    selected = true;
-            //var lb = parent as ListBox;
-            //if (lb != null)
-            //    selected = true;
             return selected ? SelectedItemTemplate : ItemTemplate;
         }
     }
